@@ -3,11 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo ao Site</title>
-    <link rel="icon" href="../static/images/logotype.jpg">
+    <title>Cadastro de Usuários</title>
+    <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="min-h-screen flex flex-col items-center bg-black text-white p-4">
+    <!-- Header -->
+    <header id="header" class="w-full flex justify-between items-center p-4 rounded-lg bg-white bg-opacity-10 shadow-md">
+        <div class="flex items-center">
+            <img src="../static/images/logotype.png" alt="Logotipo" class="w-6 mr-1">
+            <h1 class="text-xl font-medium font-mono">FUTURE UNIVERSITY</h1>
+        </div>
+        <nav class="flex space-x-5">
+            <a href="/about_us" class="text-lg px-4 py-1 rounded-md hover:bg-white hover:bg-opacity-10 transition">About us</a>
+            <a href="/contact_us" class="text-lg px-4 py-1 rounded-md hover:bg-white hover:bg-opacity-10 transition">Contact</a>
+        </nav>
+    </header>
 
+    <!-- Formulário de Cadastro -->
+    <div class="flex flex-col justify-center items-center m-5">
+        <div class="rounded-2xl shadow-lg p-6" style="width: 500px;">
+            <div class="flex justify-center items-center ">
+                <img src="../static/images/logotype.png" alt="Logotipo" class="w-4 mr-2">
+                <h1 class="text-md font-medium font-mono">FUTURE UNIVERSITY</h1>
+            </div>
+            <h2 class="text-4xl text-center mb-5 opacity-80">Contact with FUTURE UNIVERSITY</h2>
+            <form action="">
+                <div class="mb-2">
+                    <label class="text-lg opacity-90">Email</label>
+                    <input type="email" required
+                           class="text-black block w-full px-4 py-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div class="mb-2">
+                    <label class="text-lg opacity-90">Subject</label>
+                    <input type="text" required
+                           class="text-black block w-full px-4 py-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div class="mb-6">
+                    <label class="text-lg opacity-90">Description</label>
+                    <textarea type="text" required
+                           class="text-black block w-full px-4 py-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                </div>
+
+                <button type="submit"
+                        class="w-full bg-white bg-opacity-5 hover:bg-opacity-10 text-white text-xl py-3 rounded-md shadow-lg">
+                        To send
+                </button>
+            </form>
+            <h2 class="mt-2 text-white text-center text-lg hover:underline"><a href="" >Contact with Whatsapp</a></h2>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav id="nav" class="fixed bottom-4 w-full m-4 max-w-md flex justify-around items-center p-2 rounded-lg shadow-lg" style="background-color: #111111;">
+        <a href="/">
+            <img src="../static/images/home.png" alt="Home" class="w-8 md:w-10 p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition">
+        </a>
+        <a href="/available_courses">
+            <img src="../static/images/courses.png" alt="Cursos" class="w-8 md:w-10 p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition">
+        </a>
+        <a href="/payment_of_plans">
+            <img src="../static/images/payment.png" alt="Pagamentos" class="w-8 md:w-10 p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition">
+        </a>
+        <a href="/user_registration">
+            <img src="../static/images/config.png" alt="Configurações" class="w-8 md:w-10 p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition">
+        </a>
+    </nav>
 </body>
 </html>

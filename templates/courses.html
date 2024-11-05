@@ -3,11 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo ao Site</title>
-    <link rel="icon" href="../static/images/logotype.jpg">
+    <title>Cursos - FUTURE UNIVERSITY</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/logotype.png') }}">
+    <link rel="stylesheet" href="../static/style/globalstyle.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="min-h-screen flex flex-col items-center bg-black text-white p-4">
 
-</body>
-</html>
+    <!-- Header -->
+    <header id="header" class="w-full flex justify-between items-center p-4 rounded-lg bg-white bg-opacity-10 shadow-md">
+        <div class="flex items-center">
+            <img src="../static/images/logotype.png" alt="Logotipo" class="w-6 mr-1">
+            <h1 class="text-xl font-medium font-mono">FUTURE UNIVERSITY</h1>
+        </div>
+        <nav class="flex space-x-5">
+            <a href="/about_us" class="text-lg px-4 py-1 rounded-md hover:bg-white hover:bg-opacity-10 transition">About us</a>
+            <a href="/contact_us" class="text-lg px-4 py-1 rounded-md hover:bg-white hover:bg-opacity-10 transition">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main" class="flex flex-col items-center px-6 mt-10 mb-20">
+        <h1 class="text-6xl opacity-80">Our Courses</h1>
+        <div class="flex flex-wrap justify-around items-start mt-10"> 
+            <!-- Card Curso 1 - Programação Web -->
+            <div class="w-80 p-4 m-5 bg-white bg-opacity-10 rounded-2xl shadow-lg flex flex-col justify-between">
+                <h2 class="text-3xl font-medium opacity-90">Curso de Programação Web</h2>
+                <h3 class="text-2xl text-blue-200 font-medium">R$1.199,99</h3>
+                <p class="text-lg text-white opacity-60 mt-3">Learn how to develop complete websites using HTML, CSS and JavaScript.</p>
+                <button class="bg-white bg-opacity-5 hover:bg-opacity-10 text-white text-lg py-2 rounded-md shadow-lg mt-5">Ver Curso</button>
+            </div>
+
+            <!-- Card Curso 2 - Data Science -->
+            <div class="w-80 p-4 m-5 bg-white bg-opacity-10 rounded-2xl shadow-lg flex flex-col justify-between">
+                <h2 class="text-3xl font-medium opacity-90">Curso de Data Science</h2>
+                <h3 class="text-2xl text-purple-300 font-medium">R$2.299,99</h3>
+                <p class="text-lg text-white opacity-60 mt-3">
+                    Immerse yourself in the world of data analysis and learn how to extract valuable insights.</p>
+                <button class="bg-white bg-opacity-5 hover:bg-opacity-10 text-white text-lg py-2 rounded-md shadow-lg mt-5">Ver Curso</button>
+            </div>
+
+            <!-- Card Curso 3 - Desenvolvimento Mobile -->
+            <div class="w-80 p-4 m-5 bg-white bg-opacity-10 rounded-2xl shadow-lg flex flex-col justify-between">
+                <h2 class="text-3xl font-medium opacity-90">Curso de Desenvolvimento Mobile</h2>
+                <h3 class="text-2xl text-indigo-400 font-medium">R$1.799,99</h3>
+                <p class="text-lg text-white opacity-60 mt-3">
+                    Learn how to create apps for Android and iOS.</p>
+                <button class="bg-white bg-opacity-5 hover:bg-opacity-10 text-white text-lg py-2 rounded-md shadow-lg mt-5">Ver Curso</button>
+            </div>
+
+            <!-- Card Curso 4 - Segurança da Informação -->
+            <div class="w-80 p-4 m-5 bg-white bg-opacity-10 rounded-2xl shadow-lg flex flex-col justify-between">
+                <h2 class="text-3xl font-medium opacity-90">Curso de Segurança da Informação</h2>
+                <h3 class="text-2xl text-gray-300 font-medium">R$2.499,99</h3>
+                <p class="text-lg text-white opacity-60 mt-3">Learn how to protect data and systems against threats.</p>
+                <button class="bg-white bg-opacity-5 hover:bg-opacity-10 text-white text-lg py-2 rounded-md shadow-lg mt-5">Ver Curso</button>
+            </div>
+
+            <!-- Card Curso 5 - Inteligência Artificial -->
+            <div class="w-80 p-4 m-5 bg-white bg-opacity-10 rounded-2xl shadow-lg flex flex-col justify-between">
+                <h2 class="text-3xl font-medium opacity-90">Curso de Inteligência Artificial</h2>
+                <h3 class="text-2xl text-green-400 font-medium">R$2.999,99</h3>
+                <p class="text-lg text-white opacity-60 mt-3">Learn how to develop systems that simulate human intelligence.</p>
+                <button class="bg-white bg-opacity-5 hover:bg-opacity-10 text-white text-lg py-2 rounded-md shadow-lg mt-5">Ver Curso</button>
+            </div>
+
+            <!-- Card Curso 6 - Desenvolvimento de Jogos -->
+            <div class="w-80 p-4 m-5 bg-white bg-opacity-10 rounded-2xl shadow-lg flex flex-col justify-between">
+                <h2 class="text-3xl font-medium opacity-90">Curso de Desenvolvimento de Jogos</h2>
+                <h3 class="text-2xl text-orange-400 font-medium">R$2.499,99</h3>
+                <p class="text-lg text-white opacity-60 mt-3">Learn how to create games for different platforms.</p>
+                <button class="bg-white bg-opacity-5 hover:bg-opacity-10 text-white text-lg py-2 rounded-md shadow-lg mt-5">Ver Curso</button>
+            </div>
+
+            <!-- Card Curso 7 - UX Design -->
+            <div class="w-80 p-4 m-5 bg-white bg-opacity-10 rounded-2xl shadow-lg flex flex-col justify-between">
+                <h2 class="text-3xl font-medium opacity-90">Curso e projetos de UX Design</h2>
+                <h3 class="text-2xl text-pink-300 font-medium">R$1.599,99</h3>
+                <p class="text-lg text-white opacity-60 mt-3">
+                    Learn how to create intuitive and delightful user experiences.</p>
+                <button class="bg-white bg-opacity-5 hover:bg-opacity-10 text-white text-lg py-2 rounded-md shadow-lg mt-5">Ver Curso</button>
+            </div>
+
+            <!-- Card Curso 8 - UI Design -->
+            <div class="w-80 p-4 m-5 bg-white bg-opacity-10 rounded-2xl shadow-lg flex flex-col justify-between">
+                <h2 class="text-3xl font-medium opacity-90">Curso e projetos de UI Design</h2>
+                <h3 class="text-2xl text-blue-400 font-medium">R$1.799,99</h3>
+                <p class="text-lg text-white opacity-60 mt-3">
+                    Develop skills to create effective user interfaces.</p>
+                <button class="bg-white bg-opacity-5 hover:bg-opacity-10 text-white text-lg py-2 rounded-md shadow-lg mt-5">Ver Curso</button>
+            </div>
+
+            <!-- Card Curso 9 - Análise de Dados -->
+            <div class="w-80 p-4 m-5 bg-white bg-opacity-10 rounded-2xl shadow-lg flex flex-col justify-between">
+                <h2 class="text-3xl font-medium opacity-90">Curso de Análise de Dados</h2>
+                <h3 class="text-2xl text-yellow-400 font-medium">R$1.799,99</h3>
+                <p class="text-lg text-white opacity-60 mt-3">
+                    Learn to interpret data for effective decision making.</p>
+                <button class="bg-white bg-opacity-5 hover:bg-opacity-10 text-white text-lg py-2 rounded-md shadow-lg mt-5">Ver Curso</button>
+            </div>
+        </div>
+    </main>
+
+     <!-- Navigation Bar -->
+     <nav id="nav" class="fixed bottom-4 w-full m-4 max-w-md flex justify-around items-center p-2 rounded-lg shadow-lg" style="background-color: #111111;">
+        <a href="/">
+            <img src="../static/images/home.png" alt="Home" class="w-8 md:w-10 p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition">
+        </a>
+        <a href="/available_courses">
+            <img src="../static/images/courses.png" alt="Cursos" class="w-8 md:w-10 p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition">
+        </a>
+        <a href="/payment_of_plans">
+            <img src="../static/images/payment.png" alt="Pagamentos" class="w-8 md:w-10 p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition">
+        </a>
+        <a href="/user_registration">
+            <img src="../static/images/config.png" alt="Configurações" class="w-8 md:w-10 p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition">
+        </a>
+    </nav>

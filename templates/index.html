@@ -4,40 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo ao Site</title>
-    <link rel="icon" href="../static/images/logotype.jpg">
+    <link rel="icon" href="{{ url_for('static', filename='images/logotype.png')}}">
+    <link rel="stylesheet" href="../static/style/globalstyle.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="p-6" style="background-color: #111111;">
-    <header class="flex justify-between items-center p-4 rounded-lg" style="background-color: #222222;">
-        <div class="flex">
-            <img src="../static/images/logotype.png" alt="" class="w-8 mr-2">
-            <h1 class="text-white text-2xl font-regular font-mono">FUTURE UNIVERSITY</h1>
+<body class="min-h-screen flex flex-col items-center bg-black text-white p-4">
+
+    <!-- Header -->
+    <header id="header" class="w-full flex justify-between items-center p-4 rounded-lg bg-white bg-opacity-10 shadow-md">
+        <div class="flex items-center">
+            <img src="../static/images/logotype.png" alt="Logotipo" class="w-6 mr-1">
+            <h1 class="text-xl font-medium font-mono">FUTURE UNIVERSITY</h1>
         </div>
-        <div class="flex">
-            <a href="/about_us" class="text-white text-md font-mono mr-5 px-4 py-1 rounded-md hover:bg-gray-500 hover:bg-opacity-20">Quem Somos</a>
-            <a href="/contact_us" class="text-white text-md font-mono mr-5 px-4 py-1 rounded-md hover:bg-gray-500 hover:bg-opacity-20">Contato</a>
-        </div>
+        <nav class="flex space-x-5">
+            <a href="/about_us" class="text-lg px-4 py-1 rounded-md hover:bg-white hover:bg-opacity-10 transition">About us</a>
+            <a href="/contact_us" class="text-lg px-4 py-1 rounded-md hover:bg-white hover:bg-opacity-10 transition">Contact</a>
+        </nav>
     </header>
 
-    <div class="flex flex-col justify-center items-center">
-        <h1 class="text-white text-5xl text-center font-bold font-mono px-10 mt-20">SEJA BEM VINDO A FUTURE UNIVERSITY, A MELHOR FACULDADE DE TECNOLOGIA DO MUNDO!</h1>
-        <h2 class="text-white text-xl text-center font-mono px-20 mt-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</h2>
-        <button class="bg-white rounded-md font-regular font-mono px-16 py-2 text-center mt-10">SAIBA MAIS</button>
-    </div>
+    <!-- Main Content -->
+    <main id="main" class="flex flex-col items-center text-center max-w-7xl px-6 mt-32 ">
+        <h1 class="text-5xl opacity-80">
+            WELCOME TO FUTURE UNIVERSITY, THE BEST TECHNOLOGY COLLEGE IN THE WORLD!
+        </h1>
+        <h2 class="text-lg leading-relaxed max-w-5xl mt-5">
+            
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text since the 1500s. 
+        </h2>
+        <button class="bg-white bg-opacity-5 hover:bg-opacity-10 text-white text-xl py-4 px-32 rounded-md shadow-lg mb-10 mt-5">About us</button>
+    </main>
 
-    <nav class="">
-        <a href="">
-            <img src="../static/images/home.png" alt="">
+    <!-- Navigation Bar -->
+    <nav id="nav" class="fixed bottom-4 w-full m-4 max-w-md flex justify-around items-center p-2 rounded-lg shadow-lg" style="background-color: #111111;">
+        <a href="/">
+            <img src="../static/images/home.png" alt="Home" class="w-8 md:w-10 p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition">
         </a>
-        <a href="">
-            <img src="../static/images/courses.png" alt="">
+        <a href="/available_courses">
+            <img src="../static/images/courses.png" alt="Cursos" class="w-8 md:w-10 p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition">
         </a>
-        <a href="">
-            <img src="../static/images/payment.png" alt="">
+        <a href="/payment_of_plans">
+            <img src="../static/images/payment.png" alt="Pagamentos" class="w-8 md:w-10 p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition">
         </a>
-        <a href="">
-            <img src="" alt="">
+        <a href="/user_registration">
+            <img src="../static/images/config.png" alt="Configurações" class="w-8 md:w-10 p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition">
         </a>
     </nav>
+
 </body>
 </html>
