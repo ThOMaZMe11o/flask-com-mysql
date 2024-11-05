@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos - Future University</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<script>
+    // JavaScript para controlar o dropdown
+    function toggleDropdown() {
+        document.getElementById("dropdownMenu").classList.toggle("hidden");
+    }
+</script>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header de Navegação -->
+    <header class="bg-black text-white py-4 shadow-md"> 
+        <div class="container mx-auto flex justify-between items-center px-4"> 
+            <div class="flex"> 
+                <img src="../static/images/chapeu-de-graduacao.png" alt="" class="w-8 mr-2"> 
+                <h1 class="text-2xl font-medium font-mono">FUTURE UNIVERSITY</h1> 
+            </div> 
+            <nav> 
+                <a href="/" class="px-4 py-2 text-md font-medium hover:bg-gray-800 rounded font-mono">Home</a> 
+                <a href="/contato" class="px-4 py-2 text-md font-medium hover:bg-gray-800 rounded font-mono">Contato</a> 
+                <a href="/cadastro" class="px-4 py-2 text-md font-medium hover:bg-gray-800 rounded font-mono">Cadastro</a>
+                <!-- Botão para abrir o dropdown -->
+                <button onclick="toggleDropdown()" class="px-4 py-2 text-md font-medium hover:bg-gray-800 rounded font-mono">
+                    Sections
+                </button>
+                <!-- Menu Dropdown -->
+                <div id="dropdownMenu" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg hidden z-10">
+                    <a href="#inicio" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">Início</a>
+                    <a href="#cursos" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">Cursos</a>
+                    <a href="#grade-horaria" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">Grade Horária</a>
+                    <a href="#contato" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">Contato</a>
+                </div>
+            </nav> 
+        </div> 
+    </header>
+
+    <!-- Seção de Introdução -->
+    <section class="py-10 bg-gray-50 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-black mb-6">Bem-vindo à Future University</h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+                A Future University é referência em educação tecnológica, com foco no desenvolvimento de competências e habilidades necessárias para transformar o futuro. Com infraestrutura moderna e profissionais de renome, estamos comprometidos em oferecer o melhor ensino nas áreas de tecnologia e inovação.
+            </p>
+        </div>
+    </section>
+
+    <!-- Seção de Cursos com Descrição -->
+    <section id="cursos" class="bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center text-black mb-8">Nossos Cursos</h3>
+            <div class="space-y-12">
+                <!-- Curso Ciência da Computação -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                    <h4 class="text-2xl font-semibold text-black">Ciência da Computação</h4>
+                    <p class="mt-4 text-gray-700">
+                        O curso de Ciência da Computação da Future University oferece uma formação completa em algoritmos, estruturas de dados, programação e inteligência artificial. Voltado para o desenvolvimento de software e inovação, o curso capacita os alunos para criar soluções tecnológicas de alto impacto. Nossos alunos desenvolvem habilidades críticas e criativas para enfrentar problemas complexos do mundo real.
+                    </p>
+                    <p class="mt-4 text-gray-700">
+                        Disciplinas-chave incluem Análise de Algoritmos, Programação Avançada, Inteligência Artificial e Redes de Computadores, além de oportunidades para estágios e projetos em parceria com empresas do setor.
+                    </p>
+                </div>
+
+                <!-- Curso Engenharia de Software -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                    <h4 class="text-2xl font-semibold text-black">Engenharia de Software</h4>
+                    <p class="mt-4 text-gray-700">
+                        A Engenharia de Software é uma área essencial para o desenvolvimento de sistemas robustos e escaláveis. Na Future University, o curso se destaca pela abordagem prática e alinhada às melhores metodologias do mercado, como desenvolvimento ágil e DevOps. Os alunos aprendem a planejar, projetar e gerenciar projetos complexos, visando sempre a eficiência e a segurança dos sistemas.
+                    </p>
+                    <p class="mt-4 text-gray-700">
+                        O currículo abrange disciplinas como Arquitetura de Software, Engenharia de Requisitos, Testes e Qualidade de Software, além de módulos específicos sobre tecnologias emergentes e segurança cibernética.
+                    </p>
+                </div>
+
+                <!-- Curso Inteligência Artificial -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                    <h4 class="text-2xl font-semibold text-black">Inteligência Artificial</h4>
+                    <p class="mt-4 text-gray-700">
+                        A Inteligência Artificial está revolucionando diversos setores, e na Future University, os alunos aprendem a dominar essa tecnologia. Com foco em aprendizado de máquina, redes neurais e análise de dados, o curso forma profissionais capacitados para trabalhar com sistemas inteligentes que tomam decisões baseadas em dados e padrões.
+                    </p>
+                    <p class="mt-4 text-gray-700">
+                        O curso inclui disciplinas como Machine Learning, Visão Computacional, Processamento de Linguagem Natural e Data Science, com acesso a laboratórios avançados para experimentação prática.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Grade Horária -->
+    <section id="grade-horaria" class="mt-10 py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center text-black mb-8">Grade Horária</h3>
+            <div class="overflow-x-auto bg-white shadow-lg rounded-lg">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-indigo-100">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Curso</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Matéria</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Horário</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">Dias</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <!-- Linha 1 -->
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-900">Ciência da Computação</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Algoritmos e Estruturas de Dados</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">06:00 - 12:00</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Segunda-Sexta</td>
+                        </tr>
+                        <!-- Linha 2 -->
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-900">Engenharia de Software</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Design de Sistemas</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">06:00 - 12:00</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Terça-Sexta</td>
+                        </tr>
+                        <!-- Linha 3 -->
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-900">Inteligência Artificial</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Machine Learning</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">06:00 - 12:00</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Terça-Sábado</td>
+                        </tr>
+                        <!-- Linha 4 -->
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-900">Desenvolvimento de Software Multiplataforma</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Desenvolvimento de Projetos</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">06:00 - 12:00</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Segunda-Sexta</td>
+                        </tr>
+                        <!-- Linha 5 -->
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-900">Análise e Desenvolvimento de Sistemas</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Análise de Sistema de Desenvolvimento</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">14:00 - 18:00</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Segunda-Sexta</td>
+                        </tr>
+                        <!-- Linha 6 -->
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-900">Designer UI/UX</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Prototipagem e Projeto UI</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">14:00 - 18:00</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Terça-Sábado</td>
+                        </tr>
+                        <!-- Linha 7 -->
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-900">Gestão de Tecnologia</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Gestão de Dev Teams</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">14:00 - 18:00</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Terça-Sábado</td>
+                        </tr>
+                        <!-- Linha 8 -->
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-900">Back-end Developer</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Banco de dados</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">18:00 - 22:00</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Terça-Sábado</td>
+                        </tr>
+                        <!-- Linha 9 -->
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-900">Desenvolvimento FullStack</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Front-end e Back-end</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">18:00 - 22:00</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Terça-Sábado</td>
+                        </tr>
+                        <!-- Linha 10 -->
+                        <tr>
+                            <td class="px-6 py-4 text-sm text-gray-900">Web Designer Front-End</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Linguagens Alto Nivel para Desenvolvimentos Web</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">18:00 - 22:00</td>
+                            <td class="px-6 py-4 text-sm text-gray-900">Terça-Sábado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="py-10 bg-white text-center">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-black mb-4">Contato</h3>
+            <p class="text-lg text-gray-700 mb-6">
+                Tem perguntas ou quer saber mais sobre a Future University? Entre em contato conosco!
+            </p>
+            <a href="mailto:contato@futureuniversity.com" class="text-black text-lg font-semibold hover:text-indigo-700">contato@futureuniversity.com</a>
+        </div>
+    </section>
+</body>
+</html>
