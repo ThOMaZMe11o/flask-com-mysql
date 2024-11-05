@@ -28,7 +28,7 @@ def cadastro():
         try:
             db.session.add(new_user)
             db.session.commit()
-            return redirect(url_for('registered_users'))
+            return redirect(url_for('cadastro'))
         except:
             return "Houve um problema ao adicionar o usuário."
     else:
