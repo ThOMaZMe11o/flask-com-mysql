@@ -17,7 +17,7 @@ with app.app_context():
     db.create_all()
 
 # Rota para a página de cadastro
-@app.route('/cadastro', methods=['GET', 'POST'])
+@app.route('/user_registration', methods=['GET', 'POST'])
 def cadastro():
     if request.method == 'POST':
         name = request.form['name']
@@ -28,35 +28,38 @@ def cadastro():
         try:
             db.session.add(new_user)
             db.session.commit()
-            return redirect(url_for('usuarios'))
+            return redirect(url_for('registered_users'))
         except:
             return "Houve um problema ao adicionar o usuário."
     else:
-        return render_template('cadastro.html')
+        return render_template('register.html')
 
 # Rota para exibir os usuários cadastrados
-@app.route('/usuarios')
+@app.route('/registered_users')
 def usuarios():
     users = User.query.all()
-    return render_template('usuarios.html', users=users)
+    return render_template('users.html', users=users)
 
 # Página inicial que redireciona para o cadastro
 @app.route('/')
 def index():
     return render_template("index.html")
 
-@app.route('/contato')
+@app.route('/contact_us')
 def contato():
-    return render_template("contato.html")
+    return render_template("contact.html")
 
-@app.route('/quem-somos')
+@app.route('/about_us')
 def quemsomos():
-    return render_template("quemsomos.html")
+    return render_template("aboutus.html")
 
+@app.route('/payment_of_plans')
+def pagamentos():
+    return render_template("plans.html")
 
-
-
-
+@app.route('/available_courses')
+def cursos():
+    return render_template("courses.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

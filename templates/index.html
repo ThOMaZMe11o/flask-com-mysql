@@ -4,36 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo ao Site</title>
-    <!-- Tailwind CSS CDN -->
+    <link rel="icon" href="../static/images/logotype.jpg">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="overflow-hidden" style="background-image: url(../static/images/background.jpg); background-size:cover;">
-    <!-- Header de Navegação -->
-    <header class="bg-black text-white py-4 shadow-md">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <div class="flex">
-                <img src="../static/images/chapeu-de-graduacao.png" alt="" class="w-8 mr-2">
-                <h1 class="text-2xl font-medium font-mono">FUTURE UNIVERSITY</h1>
-            </div>
-            <nav>
-                <a href="/quem-somos" class="px-4 py-2 text-md font-medium hover:bg-gray-800 rounded font-mono">Quem Somos</a>
-                <a href="/contato" class="px-4 py-2 text-md font-medium hover:bg-gray-800 rounded font-mono">Contato</a>
-                <a href="/cadastro" class="px-4 py-2 text-md font-medium hover:bg-gray-800 rounded font-mono">Cadastro</a>
-            </nav>
+<body class="p-6" style="background-color: #111111;">
+    <header class="flex justify-between items-center p-4 rounded-lg" style="background-color: #222222;">
+        <div class="flex">
+            <img src="../static/images/logotype.png" alt="" class="w-8 mr-2">
+            <h1 class="text-white text-2xl font-regular font-mono">FUTURE UNIVERSITY</h1>
+        </div>
+        <div class="flex">
+            <a href="/about_us" class="text-white text-md font-mono mr-5 px-4 py-1 rounded-md hover:bg-gray-500 hover:bg-opacity-20">Quem Somos</a>
+            <a href="/contact_us" class="text-white text-md font-mono mr-5 px-4 py-1 rounded-md hover:bg-gray-500 hover:bg-opacity-20">Contato</a>
         </div>
     </header>
 
-    <!-- Seção de Boas-vindas -->
-    <section class="flex justify-center items-center mt-10">
-        <div class="p-8 bg-white bg-opacity-60 rounded-3xl shadow-lg max-w-5xl max-h-screen text-center">
-            <h1 class="text-5xl font-bold text-black mb-4">Seja bem vindo a Future University, a melhor universidade de tecnologia!!</h1>
-            <p class="text-gray-700 text-lg mb-6 font-mono mt-5">A Future University é uma instituição de ensino superior voltada para formar líderes no campo da tecnologia. Oferecemos cursos em áreas de destaque, como ciência da computação, engenharia de software e inteligência artificial, com uma abordagem inovadora e prática.
+    <div class="flex flex-col justify-center items-center">
+        <h1 class="text-white text-5xl text-center font-bold font-mono px-10 mt-20">SEJA BEM VINDO A FUTURE UNIVERSITY, A MELHOR FACULDADE DE TECNOLOGIA DO MUNDO!</h1>
+        <h2 class="text-white text-xl text-center font-mono px-20 mt-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</h2>
+        <button class="bg-white rounded-md font-regular font-mono px-16 py-2 text-center mt-10">SAIBA MAIS</button>
+    </div>
 
-                Nossa equipe de professores, composta por especialistas e profissionais do mercado, garante uma educação de ponta, conectada às demandas reais do setor. Com laboratórios modernos e acesso a tecnologias emergentes, proporcionamos um ambiente colaborativo e inclusivo, preparando nossos alunos para os desafios do futuro tecnológico. Venha para a Future University e construa seu caminho para transformar o mundo!</p>
-            <a href="/quem-somos" class="font-mono inline-block bg-black text-white px-20 py-2 rounded-lg shadow-lg font-semibold hover:bg-gray-800">
-                Saiba mais
-            </a>
-        </div>
-    </section>
+    <nav class="">
+        <a href="">
+            <img src="../static/images/home.png" alt="">
+        </a>
+        <a href="">
+            <img src="../static/images/courses.png" alt="">
+        </a>
+        <a href="">
+            <img src="../static/images/payment.png" alt="">
+        </a>
+        <a href="">
+            <img src="" alt="">
+        </a>
+    </nav>
 </body>
 </html>
