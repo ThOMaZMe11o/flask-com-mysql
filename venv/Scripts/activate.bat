@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\katel\OneDrive\Documentos\GitHub\flask-com-mysql\venv
+set VIRTUAL_ENV=C:\Users\Manhã\Documents\GitHub\API-1\flask-com-mysql\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
