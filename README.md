@@ -65,7 +65,7 @@ Para configurar e executar o projeto em um ambiente de desenvolvimento, siga as 
    ```
    pip install -r requirements.txt
    ```
-   Agora inicialize o projeto e clique no IP que aparecera pra você:
+   Agora inicialize o projeto e clique no link em *Runing on HTTP*:
    ```
    python app.py
    ```
