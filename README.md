@@ -40,10 +40,33 @@ Para configurar e executar o projeto em um ambiente de desenvolvimento, siga as 
 2. **Instalação de Dependências**:
    Clone o repositório e instale as dependências:
 
-   ```bash
+   **Clonando arquivo do github**
+   No seu terminal coloque o comando:
+   ```
    git clone https://github.com/seu-usuario/future-university-website.git
+   code .
+   ```
+   **Inicialização do projeto**
+   Agora dentro do seu projeto no vscode abra o terminal clicando em Ctrl + '' e escreva o seguinte comando:
+   Entre na raiz do projeto:
+   ```
    cd flask-com-mysql
+   ```
+   Instale a pasta venv no seu projeto
+   --A pasta venv é criada para conter um ambiente virtual em projetos Python, e serve para isolar dependências e pacotes que o projeto específico utiliza. Com isso, evita-se conflitos com          outras versões de pacotes instalados globalmente no sistema ou em outros projetos.
+   ```
    python -m venv venv
+   ```
+   Agora ative o ambiente virtual:
+   ```
    source venv/bin/activate  # ou venv\Scripts\activate no Windows
+   ```
+   Agora dentro do ambiente virtual instale os arquivos necessários para o projeto funcionar:
+   ```
    pip install -r requirements.txt
+   ```
+   Agora inicialize o projeto e clique no IP que aparecera pra você:
+   ```
    python app.py
+   ```
+   ![Imagem](static/images/python.png)
